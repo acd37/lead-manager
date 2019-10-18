@@ -1,26 +1,20 @@
 import React, { Component, Fragment } from 'react';
-import ReactDOM from 'react-dom';
-import {
-    HashRouter as Router,
-    Route,
-    Switch,
-    Redirect
-} from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { Provider as AlertProvider } from 'react-alert';
-import PrivateRoute from './common/PrivateRoute';
+import PrivateRoute from './components/common/PrivateRoute';
 
 // Redux
-import store from '../store';
+import store from './store';
 import { Provider } from 'react-redux';
-import { loadUser } from '../actions/auth';
+import { loadUser } from './actions/auth';
 
 // Components
-import Header from './layout/Header';
-import Dashboard from './leads/Dashboard';
-import Alerts from './layout/Alerts';
-import Login from './accounts/Login';
-import Register from './accounts/Register';
+import Header from './components/layout/Header';
+import Dashboard from './components/leads/Dashboard';
+import Alerts from './components/layout/Alerts';
+import Login from './components/accounts/Login';
+import Register from './components/accounts/Register';
 
 // Alert Options
 const opts = {
@@ -105,5 +99,4 @@ class App extends Component {
         );
     }
 }
-
-ReactDOM.render(<App />, document.getElementById('app'));
+export default App;
