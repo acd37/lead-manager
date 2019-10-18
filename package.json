@@ -5,7 +5,7 @@
     "engines": {
         "node": "12.6.0",
         "npm": "6.9.0"
-    }
+    },
     "main": "index.js",
     "scripts": {
         "dev": "webpack --mode development --watch ./leadmanager/client/src/index.js --output ./leadmanager/client/static/frontend/main.js",
