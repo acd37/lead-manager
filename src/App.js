@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { Provider as AlertProvider } from 'react-alert';
 import PrivateRoute from './components/common/PrivateRoute';
@@ -77,7 +77,7 @@ class App extends Component {
                                 <Switch>
                                     <PrivateRoute
                                         exact
-                                        path="/"
+                                        path="/dashboard"
                                         component={Dashboard}
                                     />
                                     <Route
